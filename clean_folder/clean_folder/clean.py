@@ -25,6 +25,13 @@ def normalize(name):
 
 def main():
 
+    if len(sys.argv) != 2:
+        print('Please enter a folder path!')
+        sys.exit(1)
+    elif os.path.exists(sys.argv[1]) != True:
+        print('Please enter a correct folder path!')
+        sys.exit(1)
+    
     basepath = os.path.abspath(sys.argv[1])
 
     CATEGORIES = {
